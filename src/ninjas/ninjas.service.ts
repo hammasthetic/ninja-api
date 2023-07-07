@@ -28,7 +28,8 @@ export class NinjasService {
     };
     this.ninjas.push(newNinja);
     return newNinja;
-  }BeltGuard
+  }
+  BeltGuard;
   updateNinja(id: number, updateNinjaDto: UpdateNinjaDto) {
     this.ninjas = this.ninjas.map((ninja) => {
       if (ninja.id === id) {

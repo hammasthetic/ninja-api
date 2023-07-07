@@ -16,9 +16,11 @@ import { CreateNinjaDto } from './dto/create.ninja.dto';
 import { UpdateNinjaDto } from './dto/update.ninja.dto';
 import { NinjasService } from './ninjas.service';
 import { BeltGuard } from 'src/belt/belt.guard';
+import { SeniorRoleGuard } from '../senior-role/senior-role.guard';
 
 @Controller('ninjas')
 @UseGuards(BeltGuard)
+@UseGuards(SeniorRoleGuard)
 export class NinjasController {
   constructor(private readonly ninjaService: NinjasService) {}
   @Get()
